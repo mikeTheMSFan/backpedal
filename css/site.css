@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #423417;
-  --secondary-color: #ecc97e;
+  --primary-color: #737373;
+  --secondary-color:#40c1dd ;
   --dark-color: #292929;
   --white-color: #dff3e4;
 }
@@ -38,6 +38,12 @@ main > .container {
   padding: 60px 15px 0;
   margin-bottom: 5rem;
 }
+
+.app-text{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
 .sticky-nav {
   position: fixed;
   left: 0;
