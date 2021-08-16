@@ -1,6 +1,6 @@
 :root {
   --primary-color: #737373;
-  --secondary-color:#40c1dd ;
+  --secondary-color: #40c1dd;
   --dark-color: #292929;
   --white-color: #dff3e4;
 }
@@ -24,13 +24,13 @@ h4,
 h5,
 h6 {
   color: var(--primary-color);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 p,
 span,
 a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
@@ -39,8 +39,8 @@ main > .container {
   margin-bottom: 5rem;
 }
 
-.app-text{
-  font-family: 'Titillium Web', sans-serif;
+.app-text {
+  font-family: "Titillium Web", sans-serif;
   font-weight: 100;
 }
 
@@ -86,8 +86,13 @@ main > .container {
   color: var(--secondary-color);
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
+#btnSubmit {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;

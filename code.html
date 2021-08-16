@@ -119,27 +119,69 @@
     <!--==== Main Section ====-->
     <main class="flex-shrink-0">
       <div class="container py-4 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark"
-          >The Code for the BACK PEDDLE app</h2
-        >
+        <h2 class="border-1 border-bottom border-dark">
+          The Code for the BACK PEDDLE app
+        </h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers">
                   <code class="language-javascript">
-                    // Call Hello World
-                    function helloWorld() {
-                      alert('Hello World');
+                    // Get the string from the page
+                    //controller or start function
+                    function getValue() {
+                      document.getElementById("alert").classList.add("invisible");
+                      let userString = document.getElementById("userString").value;
+                      let reverseString = revString(userString);
+                      displayString(reverseString);
+                    }
+                    
+                    //Reverse the string
+                    //logic function
+                    function revString(userString) {
+                      let reverseString = [];
+                    
+                      //reverse a string using a for loop
+                      for (i = userString.length - 1; i > -1; i--) {
+                        reverseString.push(userString[i]);
+                      }
+                      return reverseString;
+                    }
+                    
+                    //Display the reverse string to the user
+                    //view function
+                    function displayString(revString) {
+                      //write the message to the page
+                      document.getElementById(
+                        "msg"
+                      ).innerHTML = `Your string reversed is: ${revString.join("")}`;
+                    
+                      //show the alert box
+                      document.getElementById("alert").classList.remove("invisible");
                     }
                   </code>
               </pre>
           </div>
           <div class="col-lg-4">
             <p>The Code is structured in one function</p>
-            <h5>Hello World</h5>
-            <p
-              >Hello World is a function that displays an alert with a message
-              called 'Hello World!'</p
-            >
+            <h1 class="pb-2 border-bottom border-2">Hello World</h1>
+            <h3>getValue Function</h3>
+            <p>
+              The job of this function is to get the value from the user
+              interface, pass the string to the revString function, and finally
+              display the string.'
+            </p>
+            <h3>revString Function</h3>
+            <p>
+              The revString function take the user string passaed in by that UI,
+              loops through the string in revese, pushes each letter to a emply
+              array, and returns it to the caller.
+            </p>
+            <h3>displayString Function</h3>
+            <p>
+              The displayString Function takes the reverse array, joins it to
+              make a string, puts the string in the message element to form an
+              alert, and makes the alert element visible to the user.
+            </p>
           </div>
         </div>
       </div>
@@ -158,8 +200,8 @@
               mw-100
             "
           >
-            <div
-              ><span class="text-muted">&copy;2021</span>
+            <div>
+              <span class="text-muted">&copy;2021</span>
               <span
                 >&nbsp;&nbsp;Michael M. Robinson&nbsp;|&nbsp;
                 <i class="fa fa-envelope fa-1x" aria-hidden="true"></i
@@ -215,10 +257,10 @@
     <script src="./js/prism.js"></script>
     <script>
       Prism.plugins.NormalizeWhitespace.setDefaults({
-        'remove-trailing': true,
-        'remove-indent': true,
-        'left-trim': true,
-        'right-trim': true,
+        "remove-trailing": true,
+        "remove-indent": true,
+        "left-trim": true,
+        "right-trim": true,
       });
     </script>
   </body>
